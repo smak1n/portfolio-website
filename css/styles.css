@@ -1,0 +1,333 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --body-color: #bdd4e7;
+    --body-color2: #8693ab;
+    --link-color-visited: #9b0202;
+    --link-color-active: #0003a8;
+    --link-color-hover-focus: #ffa07a;
+    --button-backround-color: #46477a;
+    --span-color: #7e2902;
+    --table-heading-color: #009600;
+    --table-data-color: #669994;
+    --grid-item-color: #d3d3d3;
+    --heading-font-weight: 700;
+}
+/* This applies box-sizing: border-box; to all elements */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+  }
+
+html {
+    height: 100%;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
+
+body {
+    background-color: var(--body-color);
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: 10px;
+    height: 100%;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: var(--heading-font-weight);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: var(--heading-font-weight);
+}
+h3 {
+    font-size: 18px;
+    font-weight: var(--heading-font-weight);
+}
+
+
+a {
+    /* hyperlink */
+    color: var(--black-color);
+}
+      
+a:visited {
+    /* visited link */
+    color: var(--link-color-visited);
+}
+
+a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+    color: var(--link-color-hover-focus);
+    font-weight: var(--heading-font-weight);
+}
+      
+a:active {
+    /* selected link */
+    color: var(--link-color-active);
+}
+  
+     /*
+    TIP!
+    a:hover MUST come after a:visited in the CSS definition in order to be effective.
+    Likewise, a:active MUST come after a:hover in the CSS definition in order to work.
+    This means that in the example above, you’d want to make sure you move your a:hover
+    to AFTER your a:visited. Lastly, note that while these types of pseudo-class names aren’t case-sensitive,
+    it’s generally a good idea to keep everything in lowercase anyway, as this keeps your code consistent.
+    */
+
+.button, button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: var(--button-backround-color);
+    color: var(--white-color);
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 50% */
+    opacity: 0.5;
+}
+
+span {
+    color: var(--span-color);
+    font-weight: var(--heading-font-weight);
+}
+
+table, th, td {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    width: 25%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--table-heading-color);
+}
+
+table {
+    background-color: var(--black-color);
+}
+
+td {
+    background-color: var(--table-data-color);
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+ .profile__picture {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 40px;
+    border-radius: 50%;
+} 
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+.grid__item {
+    background-color: var(--grid-item-color);
+    display: inline-block;
+    width: 33%;
+}
+
+.about-me {
+    text-align: center;
+}
+
+.table-about {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-about {
+    list-style-type: none ;
+    margin-right: 40px;
+    margin-left: auto;   
+}
+
+.contact-container {
+    display: grid;
+    margin: 0 auto;
+    max-width: 500px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+/* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-gap: 20px;
+    }
+    
+    .grid__item {
+        background-color: var(--grid-item-color);
+        width: auto;
+        padding: 10px;
+        border-radius: 7px;
+    }
+    
+    .grid__item h2 {
+        margin: 0;
+    }
+    
+    .grid__item:last-child {
+        grid-column: 3 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+}
+  
+  @media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+  
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+    .grid__item:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+}
+.berlin-illustration {
+    display: block;
+    margin: auto;
+    /*this is for centering the SVG*/
+}
+
+@keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
+    }
+    100% {
+      fill: #f76414;
+    }
+}
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    /* 4s color-change infinite alternate linear */
+}
+
+@keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+}
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+        from {
+          transform: translate(446px, 48px);
+        }
+        to {
+          transform: translate(100px, 48px);
+        }
+    }
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+    }
+
+

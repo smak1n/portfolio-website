@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ismail Ismail - Portfolio</title>
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header class="page-header">          
+            <img src="img/LogoIsmail.JPG" width="200px" class="page-header__item" alt="Personal Website logo">               
+            <nav class="main-navigation page-header__item">                   
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" aria-label="Personal information about me" class="navigation-list__item">About</a>
+                    </li>
+                    <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+                    </li>
+                    </ul>
+                </nav>
+            
+        </header>
+            <div class="contact-container">
+                <h1>Contact me</h1>
+                <div class="contact-form">
+                    <form action="" method="post" id="contact-form">
+                        <label class="standart-label" for="contact-name">Name:*</label><br>
+                        <input type="text" id="contact-name" required><br>
+                        <br>
+
+                        <label class="standart-label" for="contact-email">E-mail:* </label><br>
+                        <input type="email" id="contact-email" required><br>
+                        <br>
+
+                        <label class="standart-label" for="contact-tel">Telephone:* </label><br>
+                        <input type="tel" id="contact-tel"><br>
+                        <br>
+
+                        <label class="standart-label" for="contact-text">Message:* </label><br>
+                        <textarea id="contact-text" required maxlength="240"></textarea><br>
+                        <input type="submit" class="button" value="Send message"><br>
+                        <p>*-required</p>
+                        <br>
+                    <div class="contact-info">                  
+                        <p>
+                            34233 Fuldatal<br>
+                            Bruchstrasse 13<br>
+                            Germany<br>
+                        </p>
+                        email:<a href="mailto:vinux181@gmail.com">vinux181@gmail.com</a><br>
+                        tel:<a href="tel:+491636237992" aria-label="My personal telephone number">+491636237992</a><br>
+                        Skype:<a href="skype:lxvinux">lxvinux</a><br>
+                    </div>
+                </div>
+            </div>
+            <footer class="page-footer">
+                <p>Find me on</p>
+                <div class="social-media">          
+                <a href="https://github.com/smak1n" target="_blank"><img src="img/github.svg" alt="Github"></a>
+                <a href="https://twitter.com/VinuX181" target="_blank"><img src="img/twitter.svg" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/ismail-ismail-07a7961a1/" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </footer>
+            <script src="js/tota11y.min.js"></script>
+        </body>
+    </html>
