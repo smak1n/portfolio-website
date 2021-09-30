@@ -270,6 +270,10 @@ input, select, textarea {
     text-align: center;
 }
 
+.work-heading {
+    text-align: center;
+}
+
 @supports (display: grid) {
     .grid {
         display: -ms-grid;
