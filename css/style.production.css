@@ -224,12 +224,6 @@ td {
     
 }
 
-.grid__item {
-    background-color: #d3d3d3;
-    display: inline-block;
-    width: 33%;
-}
-
 .about-me {
     text-align: center;
 }
