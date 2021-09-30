@@ -266,6 +266,10 @@ input, select, textarea {
     text-align: center;
 }
 
+.contact-heading {
+    text-align: center;
+}
+
 @supports (display: grid) {
     .grid {
         display: -ms-grid;
